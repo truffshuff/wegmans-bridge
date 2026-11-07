@@ -1,0 +1,9 @@
+services:
+  wegmans-bridge:
+    build: .
+    container_name: wegmans-bridge
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/data   # browser-profile/ (your Wegmans sign-in) + bridge.sqlite3
+    shm_size: "512mb"  # Chromium needs more than Docker's 64 MB default

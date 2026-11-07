@@ -1,0 +1,8 @@
+# Your Wegmans sign-in and local state - never commit
+data/
+.env
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
